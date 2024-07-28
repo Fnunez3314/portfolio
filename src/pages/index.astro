@@ -1,0 +1,31 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Header from "../components/Header.astro";
+import About from "../components/About.astro";
+import Technologies from "../components/Technologies.astro";
+import Proyects from "../components/Proyects.astro";
+import Contact from "../components/Contact.astro";
+---
+
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <div id="home" class="container flex flex-col mx-auto bg-transparent">
+      <Navbar />
+      <Header />
+      <hr />
+      <About />
+      <hr />
+      <Technologies />
+      <hr />
+      <Proyects />
+      <Contact />
+    </div>
+  </body>
+</html>
