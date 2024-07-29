@@ -1,122 +1,44 @@
 ---
+export interface Props {
+  id: number;
+  name: string;
+  description: string;
+  url: string;
+  repo: string;
+  icon: string;
+}
 
+const { id, name, description, url, repo, icon } = Astro.props;
 ---
 
-<div class="flex max-w-xs flex-col gap-6 items-center">
-  <div
-    class="relative box-content flex items-center justify-center overflow-hidden rounded-full size-10 bg-blue-700 stroke-white border-white drop-shadow-md border-[3px]"
-  >
-    <div class="flex items-center justify-center size-[18px]">
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        stroke="white"
-        stroke-width="1.5"
-        class="size-6 stroke-inherit"
-      >
-        <g clip-path="url(#clip0_3526_27521)">
-          <circle cx="11.8286" cy="11.6814" r="3"></circle>
-          <ellipse
-            cx="5.40957"
-            cy="11.2139"
-            rx="5.40957"
-            ry="11.2139"
-            transform="matrix(-0.707107 0.707107 0.707107 0.707107 7.65082 0)"
-          ></ellipse>
-          <ellipse
-            cx="11.7545"
-            cy="11.7546"
-            rx="5.40957"
-            ry="11.2139"
-            transform="rotate(45 11.7545 11.7546)"></ellipse>
-        </g>
-        <defs>
-          <clipPath id="clip0_3526_27521">
-            <rect width="24" height="24" fill="white"></rect>
-          </clipPath>
-        </defs>
-      </svg>
-    </div>
-  </div>
-  <div class="flex flex-col gap-4 md:gap-6 items-center text-center">
-    <p class="text-xl font-semibold">Headline</p>
-    <p class="text-base text-slate-500">
-      We've done it carefully and simply. Combined with the ingredients makes
-      for beautiful landings.
-    </p>
-    <button
-      type="button"
-      class="group inline-flex items-center justify-center whitespace-nowrap rounded-lg align-middle text-sm font-semibold leading-none transition-all duration-300 ease-in-out disabled:cursor-not-allowed stroke-blue-700 text-blue-700 h-[42px] min-w-[42px] gap-2 disabled:stroke-slate-400 disabled:text-slate-400 hover:stroke-blue-950 hover:text-blue-950 p-0"
-    >
-      <span>Learn More</span>
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="#1D4ED8"
-        stroke-width="1.5"
-        xmlns="http://www.w3.org/2000/svg"
-        class="size-6 stroke-inherit"
-      >
-        <path
-          d="M11 16L15 12L11 8"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-        <circle cx="12" cy="12" r="9"></circle>
-      </svg>
-    </button>
-  </div>
-</div>
-
 <div
-  class="flex-shrink-0 m-6 relative overflow-hidden bg-purple-500 rounded-lg max-w-xs shadow-lg"
+  id={`item-${id}`}
+  class="item relative mt-4 mb-8 flex w-80 flex-col rounded-xl bg-slate-100 bg-clip-border text-gray-700 shadow-md"
 >
-  <svg
-    class="absolute bottom-0 left-0 mb-8"
-    viewBox="0 0 375 283"
-    fill="none"
-    style="transform: scale(1.5); opacity: 0.1;"
-  >
-    <rect
-      x="159.52"
-      y="175"
-      width="152"
-      height="152"
-      rx="8"
-      transform="rotate(-45 159.52 175)"
-      fill="white"></rect>
-    <rect
-      y="107.48"
-      width="152"
-      height="152"
-      rx="8"
-      transform="rotate(-45 0 107.48)"
-      fill="white"></rect>
-  </svg>
-  <div class="relative pt-10 px-10 flex items-center justify-center">
-    <div
-      class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
-      style="background: radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2;"
-    >
-    </div>
-    <img
-      class="relative w-40"
-      src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-      alt=""
-    />
+  <div class="mx-4 -mt-6 h-40 overflow-hidden rounded-xl">
+    <a href={url}>
+      <img src={icon} alt="" class="w-full h-full object-cover" />
+    </a>
   </div>
-  <div class="relative text-white px-6 pb-6 mt-6">
-    <span class="block opacity-75 -mb-1">Outdoor</span>
-    <div class="flex justify-between">
-      <span class="block font-semibold text-xl">Oak Tree</span>
-      <span
-        class="block bg-white rounded-full text-purple-500 text-xs font-bold px-3 py-2 leading-none flex items-center"
-        >$68.50</span
-      >
-    </div>
+  <div class="p-6">
+    <h5
+      class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased"
+    >
+      {name}
+    </h5>
+    <p
+      class="block font-sans text-base font-light leading-relaxed text-inherit antialiased"
+    >
+      {description}
+    </p>
+  </div>
+  <div class="p-6 pt-0">
+    <button
+      data-ripple-light="true"
+      type="button"
+      class="flex items-center py-4 text-sm font-medium px-7 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 transition duration-300 rounded-2xl drop-shadow-md"
+    >
+      <a href={repo}>Link al repo</a>
+    </button>
   </div>
 </div>
