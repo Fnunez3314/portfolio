@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "name": "Fan Page",
-        "description": "Pequeña fan page hecha con bootstrap",
+        "name": "Fanpage",
+        "description": "Pequeña fanpage, hecha con bootstrap",
         "url": "https://extraordinary-longma-7feb3a.netlify.app/",
         "repo": "https://github.com/Fnunez3314/fanPage-arcticMonkeys",
         "icon": "public/assets/img/arctics.png"
@@ -10,7 +10,7 @@
     {
         "id": 2,
         "name": "Memory Game",
-        "description": "Juego de memoria hecho con Javascript y CSS",
+        "description": "Juego de memoria, hecho con Javascript y CSS",
         "url": "https://aquamarine-pixie-74ac4f.netlify.app/",
         "repo": "https://github.com/Fnunez3314/memory-game-js",
         "icon": "public/assets/img/cards en tamaño pequeño.png"
