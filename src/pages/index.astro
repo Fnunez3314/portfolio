@@ -5,6 +5,7 @@ import About from "../components/About.astro";
 import Technologies from "../components/Technologies.astro";
 import Proyects from "../components/Proyects.astro";
 import Contact from "../components/Contact.astro";
+import NavbarTest from "../components/NavbarTest.astro";
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -13,11 +14,11 @@ import Contact from "../components/Contact.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Portfolio Federico Nuñez</title>
   </head>
-  <body>
-    <div class="container flex flex-col mx-auto bg-transparent">
-      <Navbar />
+  <body class="bg-white">
+    <div class="container flex flex-col mx-auto">
+      <NavbarTest />
       <Header />
       <hr />
       <About />
