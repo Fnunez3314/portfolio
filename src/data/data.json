@@ -22,13 +22,5 @@
         "url": "https://shiny-centaur-cb877c.netlify.app/",
         "repo": "https://github.com/Fnunez3314/gallery-app",
         "icon": "public/assets/img/gallery1.png"
-    },
-    {
-        "id": 4,
-        "name": "Ya veremos",
-        "description": "Será increíble we",
-        "url": "",
-        "repo": "",
-        "icon": "https://api.iconify.design/emojione:framed-picture.svg?color=%23888888"
     }
 ]

@@ -1,6 +1,6 @@
 ---
 import data from "../data/data.json";
-import ExampleCard from "./ExampleCard.astro";
+import ProyectsCard from "./ProyectsCard.astro";
 ---
 
 <div
@@ -9,7 +9,7 @@ import ExampleCard from "./ExampleCard.astro";
   <h3
     class="flex justify-center text-4xl font-semibold tracking-tight sm:max-md:text-center"
   >
-    Proyects
+    Proyectos
   </h3>
   <div
     id="section4"
@@ -17,7 +17,7 @@ import ExampleCard from "./ExampleCard.astro";
   >
     {
       data.map((item) => (
-        <ExampleCard
+        <ProyectsCard
           id={item.id}
           name={item.name}
           description={item.description}
