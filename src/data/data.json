@@ -5,7 +5,7 @@
         "description": "Pequeña fanpage, hecha con bootstrap",
         "url": "https://extraordinary-longma-7feb3a.netlify.app/",
         "repo": "https://github.com/Fnunez3314/fanPage-arcticMonkeys",
-        "icon": "public/assets/img/arcticMonkeysFan.jpeg"
+        "icon": "public/arcticMonkeysFan.jpeg"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "description": "Juego de memoria, hecho con Javascript y CSS",
         "url": "https://aquamarine-pixie-74ac4f.netlify.app/",
         "repo": "https://github.com/Fnunez3314/memory-game-js",
-        "icon": "public/assets/img/memoryGame.jpg.webp"
+        "icon": "public/memoryGame.jpg.webp"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "description": "Biblioteca de imagénes, hecha con React y API",
         "url": "https://shiny-centaur-cb877c.netlify.app/",
         "repo": "https://github.com/Fnunez3314/gallery-app",
-        "icon": "public/assets/img/galleryApp.jpeg"
+        "icon": "public/galleryApp.jpeg"
     },
     {
         "id": 4,
@@ -29,6 +29,6 @@
         "description": "Repositorio de esta misma web",
         "url": "",
         "repo": "https://github.com/Fnunez3314/portfolio",
-        "icon": "public/assets/img/portfolioWeb.png"
+        "icon": "public/portfolioWeb.png"
     }
 ]
