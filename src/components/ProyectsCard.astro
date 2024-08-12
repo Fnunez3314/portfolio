@@ -13,21 +13,36 @@ const { id, name, description, url, repo, icon } = Astro.props;
 
 <div
   id={`item-${id}`}
-  class="item relative mt-4 mb-8 flex w-80 flex-col rounded-xl bg-slate-50 bg-clip-border text-gray-700 drop-shadow-md"
+  class="item relative mt-4 mb-8 flex w-80 flex-col rounded-xl bg-slate-50 bg-clip-border text-gray-700 drop-shadow-md transition hover:scale-105"
 >
-  <div class="mx-4 -mt-6 h-40 overflow-hidden rounded-xl">
-    <a href={url} target="_blank">
-      <img src={icon} alt="" class="w-full h-full object-cover" />
+  <div class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl">
+    <a href={url} target="_blank" class="group/img">
+      <img
+        src={icon}
+        alt=""
+        class="w-full h-full object-cover rounded-xl transition group-hover/img:brightness-50 duration-300"
+      />
+
+      <div
+        class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover/img:opacity-100"
+      >
+        <span class="text-white md:text-md text-sm font-semibold"
+          >Ir a la web</span
+        >
+      </div>
     </a>
   </div>
   <div class="p-6">
-    <h5
-      class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased"
+    <a href={url}>
+      <button
+        role="link"
+        class="relative text-xl font-bold after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"
+        >{name}</button
+      ></a
     >
-      {name}
-    </h5>
+
     <p
-      class="block font-sans text-base font-light leading-relaxed text-inherit antialiased"
+      class="block font-normal text-base text-grey-500 font-light leading-relaxed text-inherit antialiased"
     >
       {description}
     </p>
@@ -35,19 +50,25 @@ const { id, name, description, url, repo, icon } = Astro.props;
   <div class="p-6 pt-0">
     <a href={repo} target="_blank">
       <button
-        data-ripple-light="true"
-        type="button"
-        class="flex items-center py-4 text-sm font-medium px-6 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 transition duration-300 rounded-2xl drop-shadow-md"
-        >Ir al repositorio <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          ><path
-            fill="#334155"
-            d="M8.59 16.59L13.17 12L8.59 7.41L10 6l6 6l-6 6z"></path></svg
+        class="group relative text-sm inline-flex h-12 items-center justify-center overflow-hidden rounded-xl border border-neutral-300 bg-transparent px-4 font-medium text-slate-700 md:hover:bg-slate-200"
+        ><span>Ir al repositorio</span><div
+          class="md:w-0 w-5 md:translate-x-[100%] translate-x-0 pl-0 md:opacity-0 md:transition-all duration-200 md:group-hover:w-5 md:group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100"
         >
-      </button>
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            ><path
+              d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+              clip-rule="evenodd"></path></svg
+          >
+        </div></button
+      >
     </a>
   </div>
 </div>
