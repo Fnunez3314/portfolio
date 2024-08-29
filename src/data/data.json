@@ -11,7 +11,7 @@
         "id": 2,
         "name": "Memory Game",
         "description": "Juego de memoria, hecho con Javascript y CSS",
-        "url": "https://aquamarine-pixie-74ac4f.netlify.app/",
+        "url": "https://memory-game-fnunez.netlify.app",
         "repo": "https://github.com/Fnunez3314/memory-game-js",
         "icon": "/img/memoryGame.jpg.webp"
     },
